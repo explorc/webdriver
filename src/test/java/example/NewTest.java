@@ -14,12 +14,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import ru.yandex.qatools.allure.annotations.Step;
+import ru.yandex.qatools.allure.annotations.Stories;
 import ru.yandex.qatools.allure.annotations.Attachment;
+import ru.yandex.qatools.allure.annotations.Features;
+
 import org.testng.annotations.BeforeTest;	
 import org.testng.annotations.AfterTest;		
 public class NewTest {		
 	    private FirefoxDriver driver;		
-		@Test				
+
+	    @Features("Basic feature")
+	    @Stories({"Startup"})
+	    @Test 				
 		public void testEasy() {
 			printing();
 			driver.get("http://www.guru99.com/selenium-tutorial.html");  
